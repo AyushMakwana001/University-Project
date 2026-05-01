@@ -1,0 +1,101 @@
+<!-- settings.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Settings | Nexus University</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+  </head>
+  <body class="bg-gray-50">
+    <div class="flex min-h-screen">
+      <aside class="w-72 bg-indigo-950 text-white fixed h-full">
+        <div class="p-6">
+          <i class="fas fa-university text-2xl text-amber-400"></i
+          ><span class="font-sora font-bold text-xl ml-2"
+            >Nexus<span class="text-amber-400">University</span></span
+          >
+        </div>
+        <nav class="flex flex-col gap-1 p-4">
+          <a
+            href="dashboard-teacher.html"
+            class="sidebar-item flex items-center gap-3 px-4 py-3 rounded-lg"
+            ><i class="fas fa-chart-line"></i><span>Dashboard</span></a
+          ><a
+            href="settings.html"
+            class="sidebar-item active flex items-center gap-3 px-4 py-3 rounded-lg"
+            ><i class="fas fa-cog"></i><span>Settings</span></a
+          >
+        </nav>
+      </aside>
+      <main class="flex-1 ml-72 p-8">
+        <div class="max-w-2xl mx-auto">
+          <h1 class="text-2xl font-bold mb-6">Account Settings</h1>
+          <div class="bg-white rounded-xl shadow-sm p-8 space-y-6">
+            <div>
+              <h3 class="font-semibold border-b pb-2">Profile Information</h3>
+              <div class="mt-4 space-y-4">
+                <div>
+                  <label class="block text-sm">Full Name</label
+                  ><input
+                    type="text"
+                    value="Prof. Eleanor Vance"
+                    class="w-full p-3 border rounded-lg"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm">Email Address</label
+                  ><input
+                    type="email"
+                    value="eleanor.vance@nexus.edu"
+                    class="w-full p-3 border rounded-lg"
+                  />
+                </div>
+                <div>
+                  <label class="block text-sm">Department</label
+                  ><input
+                    type="text"
+                    value="Computer Science"
+                    class="w-full p-3 border rounded-lg"
+                  />
+                </div>
+              </div>
+            </div>
+            <div>
+              <h3 class="font-semibold border-b pb-2">Change Password</h3>
+              <div class="mt-4 space-y-4">
+                <input
+                  type="password"
+                  placeholder="Current Password"
+                  class="w-full p-3 border rounded-lg"
+                /><input
+                  type="password"
+                  placeholder="New Password"
+                  class="w-full p-3 border rounded-lg"
+                /><input
+                  type="password"
+                  placeholder="Confirm Password"
+                  class="w-full p-3 border rounded-lg"
+                />
+              </div>
+            </div>
+            <button
+              class="w-full bg-indigo-900 text-white py-3 rounded-lg font-semibold"
+            >
+              Save Changes
+            </button>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>

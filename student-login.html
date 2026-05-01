@@ -1,0 +1,66 @@
+<!-- student-login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Login | Nexus University</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="bg-gradient-to-br from-indigo-50 via-white to-amber-50 min-h-screen flex items-center justify-center p-4">
+    <div class="max-w-md w-full">
+        <!-- Logo & Brand -->
+        <div class="text-center mb-8">
+            <div class="inline-flex items-center justify-center w-16 h-16 bg-indigo-900 rounded-2xl shadow-lg mb-4">
+                <i class="fas fa-user-graduate text-3xl text-white"></i>
+            </div>
+            <h1 class="text-2xl font-bold text-indigo-900">Student Portal</h1>
+            <p class="text-gray-500 mt-1">Sign in to access your academic dashboard</p>
+        </div>
+
+        <!-- Login Card -->
+        <div class="bg-white/90 backdrop-blur-sm rounded-2xl shadow-2xl p-8 border border-gray-100">
+            <form id="studentLoginForm">
+                <div class="mb-5">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Roll Number / Registration ID</label>
+                    <div class="relative">
+                        <i class="fas fa-id-card absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                        <input type="text" id="rollNo" class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 transition" placeholder="CS2024001" required>
+                    </div>
+                </div>
+                <div class="mb-6">
+                    <label class="block text-sm font-semibold text-gray-700 mb-2">Password</label>
+                    <div class="relative">
+                        <i class="fas fa-lock absolute left-3 top-1/2 -translate-y-1/2 text-gray-400"></i>
+                        <input type="password" id="password" class="w-full pl-10 pr-4 py-3 border border-gray-200 rounded-xl focus:border-indigo-400 focus:ring-2 focus:ring-indigo-100 transition" placeholder="••••••••" required>
+                    </div>
+                </div>
+                <button type="submit" class="w-full bg-indigo-900 text-white py-3 rounded-xl font-semibold hover:bg-indigo-800 transition shadow-md hover:shadow-lg">
+                    <i class="fas fa-arrow-right-to-bracket mr-2"></i> Sign In
+                </button>
+            </form>
+            <div class="mt-6 text-center text-sm text-gray-500">
+                <p>Demo Credentials: <span class="font-mono bg-gray-100 px-2 py-1 rounded">CS2024001</span> / <span class="font-mono">demo123</span></p>
+                <a href="index.html" class="text-indigo-600 hover:underline mt-3 inline-block"><i class="fas fa-arrow-left mr-1"></i> Back to Home</a>
+            </div>
+        </div>
+
+        <!-- Trust Badge -->
+        <div class="text-center mt-6 text-xs text-gray-400">
+            <i class="fas fa-shield-alt"></i> Secured by Nexus Security Protocol
+        </div>
+    </div>
+
+    <script>
+        document.getElementById('studentLoginForm')?.addEventListener('submit', function(e) {
+            e.preventDefault();
+            // Demo authentication - redirect to dashboard
+            window.location.href = 'dashboard-student.html';
+        });
+    </script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

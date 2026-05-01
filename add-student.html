@@ -1,0 +1,27 @@
+<!-- add-student.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Student | Nexus University</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="bg-gray-50">
+    <div class="flex min-h-screen">
+        <aside class="w-72 bg-indigo-950 text-white fixed h-full" style="background: linear-gradient(180deg, #0f172a 0%, #111827 100%);">
+            <div class="p-6 border-b border-white/10"><i class="fas fa-university text-2xl text-amber-400"></i><span class="font-sora font-bold text-xl ml-2">Nexus<span class="text-amber-400">University</span></span></div>
+            <nav class="flex flex-col gap-1 p-4"><a href="dashboard-teacher.html" class="sidebar-item flex items-center gap-3 px-4 py-3 rounded-lg"><i class="fas fa-chart-line w-5"></i><span>Dashboard</span></a><a href="manage-students.html" class="sidebar-item flex items-center gap-3 px-4 py-3 rounded-lg"><i class="fas fa-users w-5"></i><span>Manage Students</span></a><a href="add-student.html" class="sidebar-item active flex items-center gap-3 px-4 py-3 rounded-lg"><i class="fas fa-plus-circle w-5"></i><span>Add Student</span></a></nav>
+            <div class="absolute bottom-6 left-6 right-6"><div class="border-t border-white/10 pt-4"><p class="text-sm font-medium">Prof. Eleanor Vance</p><a href="index.html" class="text-white/50 hover:text-white text-sm mt-2 block"><i class="fas fa-sign-out-alt mr-1"></i> Logout</a></div></div>
+        </aside>
+        <main class="flex-1 ml-72 p-8">
+            <div class="max-w-2xl"><h1 class="text-2xl font-bold mb-6">Add New Student</h1><div class="bg-white rounded-xl shadow-sm p-8"><form id="addStudentForm"><div class="space-y-5"><div><label class="block text-sm font-medium mb-1">Full Name</label><input type="text" class="w-full p-3 border rounded-lg" required></div><div><label class="block text-sm font-medium mb-1">Roll Number</label><input type="text" class="w-full p-3 border rounded-lg" required></div><div><label class="block text-sm font-medium mb-1">Email</label><input type="email" class="w-full p-3 border rounded-lg" required></div><div><label class="block text-sm font-medium mb-1">Program</label><select class="w-full p-3 border rounded-lg"><option>B.Tech CSE</option><option>B.Tech IT</option><option>B.Tech ECE</option></select></div><div><label class="block text-sm font-medium mb-1">Joining Year</label><input type="number" class="w-full p-3 border rounded-lg"></div><button type="submit" class="w-full bg-indigo-900 text-white py-3 rounded-lg font-semibold"><i class="fas fa-save mr-2"></i>Create Student Record</button></div></form></div></div>
+        </main>
+    </div>
+    <script>document.getElementById('addStudentForm')?.addEventListener('submit', function(e){ e.preventDefault(); alert('Student added successfully! (Backend integration ready)'); window.location.href='manage-students.html'; });</script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>

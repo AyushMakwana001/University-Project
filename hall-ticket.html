@@ -1,0 +1,101 @@
+<!-- hall-ticket.html -->
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Hall Ticket | Nexus University</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <link rel="stylesheet" href="assets/css/custom.css" />
+  </head>
+  <body class="bg-gray-50">
+    <div class="flex min-h-screen">
+      <aside class="w-72 bg-indigo-950 text-white fixed h-full">
+        <div class="p-6">
+          <i class="fas fa-university text-2xl text-amber-400"></i
+          ><span class="font-sora font-bold text-xl ml-2"
+            >Nexus<span class="text-amber-400">University</span></span
+          >
+        </div>
+        <nav class="flex flex-col gap-1 p-4">
+          <a
+            href="dashboard-student.html"
+            class="sidebar-item flex items-center gap-3 px-4 py-3 rounded-lg"
+            ><i class="fas fa-tachometer-alt"></i><span>Dashboard</span></a
+          ><a
+            href="marksheet.html"
+            class="sidebar-item flex items-center gap-3 px-4 py-3 rounded-lg"
+            ><i class="fas fa-chart-bar"></i><span>Marksheet</span></a
+          ><a
+            href="hall-ticket.html"
+            class="sidebar-item active flex items-center gap-3 px-4 py-3 rounded-lg"
+            ><i class="fas fa-ticket-alt"></i><span>Hall Ticket</span></a
+          >
+        </nav>
+      </aside>
+      <main class="flex-1 ml-72 p-8">
+        <div
+          class="max-w-2xl mx-auto bg-white rounded-xl shadow-sm p-8 border-2 border-amber-200"
+        >
+          <div class="text-center">
+            <i class="fas fa-university text-4xl text-indigo-900 mb-2"></i>
+            <h1 class="text-xl font-bold">NEXUS UNIVERSITY</h1>
+            <p class="text-sm">End Semester Examination - April 2026</p>
+            <div class="border-t-2 border-dashed my-6"></div>
+            <h2 class="text-2xl font-bold">HALL TICKET</h2>
+          </div>
+          <div class="mt-6 space-y-3">
+            <div class="flex justify-between">
+              <span class="font-semibold">Student Name:</span
+              ><span>Olivia Chen</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="font-semibold">Roll Number:</span
+              ><span>CS2024001</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="font-semibold">Program:</span
+              ><span>B.Tech Computer Science</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="font-semibold">Semester:</span><span>IV</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="font-semibold">Exam Center:</span
+              ><span>Academic Block-2, Room 201</span>
+            </div>
+            <div class="flex justify-between">
+              <span class="font-semibold">Date:</span
+              ><span>15 May - 30 May 2026</span>
+            </div>
+          </div>
+          <div class="bg-amber-50 p-4 rounded-lg mt-6 text-center text-sm">
+            <i class="fas fa-info-circle text-amber-600"></i> Candidates must
+            bring valid ID and this hall ticket to the exam hall.
+          </div>
+          <button
+            id="downloadHallTicket"
+            class="mt-6 w-full bg-indigo-900 text-white py-3 rounded-lg"
+          >
+            <i class="fas fa-download mr-2"></i>Download Hall Ticket (PDF)
+          </button>
+        </div>
+      </main>
+    </div>
+    <script>
+      document
+        .getElementById("downloadHallTicket")
+        ?.addEventListener("click", () =>
+          alert("Hall Ticket PDF generation - backend ready"),
+        );
+    </script>
+    <script src="assets/js/app.js"></script>
+  </body>
+</html>
